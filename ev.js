@@ -1,4 +1,9 @@
 'use strict';
- setInterval(function(){
-   console.log('Hello with delay:)');
- },3000)
+
+let counter = 0;
+ const interval = setInterval(function(){
+   console.log(`Called ${++counter}times`);
+   if(counter == 8){
+     clearInterval(interval);
+   }
+ },500)
